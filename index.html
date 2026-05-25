@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="bg-slider"></div>
+
     <header class="hero">
         <h1>Sagada Expedition Tracker ⛰️</h1>
         <p>Your digital hub for gear, logistics, and trail itineraries.</p>
@@ -30,9 +32,10 @@
 
             <section class="card">
                 <h2>💸 Budget Logistics</h2>
-                <div class="input-group">
-                    <input type="number" id="budget-input" placeholder="Amount (PHP)">
-                    <button onclick="addExpense()">Add Expense</button>
+                <div class="input-group split-inputs">
+                    <input type="text" id="expense-name" placeholder="Expense name (e.g. Food)">
+                    <input type="number" id="budget-amount" placeholder="Amount (₱)">
+                    <button onclick="addExpense()">Add</button>
                 </div>
                 <ul id="expense-list" class="checklist">
                     <li>Manila to Banaue Bus - ₱1200</li>
