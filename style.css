@@ -25,10 +25,10 @@ body { color: var(--text); line-height: 1.6; min-height: 100vh; position: relati
 }
 
 @keyframes slideShow {
-    0%, 100% { background-image: url('download (3).jpeg'); } /* Sea of Clouds */
-    25% { background-image: url('download.jpeg'); } /* Rice Terraces */
-    50% { background-image: url('download (1).jpeg'); } /* Hanging Coffins */
-    75% { background-image: url('download (4).jpeg'); } /* Cave */
+    0%, 100% { background-image: url('download (3).png'); } /* Sea of Clouds */
+    25% { background-image: url('download.png'); } /* Rice Terraces */
+    50% { background-image: url('download (1).png'); } /* Hanging Coffins */
+    75% { background-image: url('download (4).png'); } /* Cave */
 }
 
 /* --- MAIN UI --- */
