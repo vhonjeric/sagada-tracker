@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagada Expedition Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Sagada Expedition Tracker ⛰️</h1>
+        <p>Your digital hub for gear, logistics, and trail itineraries.</p>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            <section class="card">
+                <h2>🎒 Gear Checklist</h2>
+                <div class="input-group">
+                    <input type="text" id="gear-input" placeholder="Add new gear...">
+                    <button onclick="addGear()">Add</button>
+                </div>
+                <ul id="gear-list" class="checklist">
+                    <li><input type="checkbox" checked> <span>Thermal Jacket</span></li>
+                    <li><input type="checkbox"> <span>Headlamp & Extra Batteries</span></li>
+                    <li><input type="checkbox"> <span>Trekking Poles</span></li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>💸 Budget Logistics</h2>
+                <div class="input-group">
+                    <input type="number" id="budget-input" placeholder="Amount (PHP)">
+                    <button onclick="addExpense()">Add Expense</button>
+                </div>
+                <ul id="expense-list" class="checklist">
+                    <li>Manila to Banaue Bus - ₱1200</li>
+                    <li>Environmental Fee - ₱100</li>
+                </ul>
+                <div class="total">Total: ₱<span id="total-budget">1300</span></div>
+            </section>
+
+            <section class="card itinerary">
+                <h2>🗺️ Trail Itinerary</h2>
+                <ul>
+                    <li><strong>Day 1:</strong> Arrival, Echo Valley & Hanging Coffins.</li>
+                    <li><strong>Day 2:</strong> Marlboro Hills Sunrise & Blue Soil Trek.</li>
+                    <li><strong>Day 3:</strong> Sumaguing Cave Spelunking & Departure.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
