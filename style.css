@@ -1,0 +1,31 @@
+:root {
+    --bg-color: #f8fafc;
+    --primary: #0f172a;
+    --accent: #10b981; /* Nature green for the mountain vibe */
+    --text: #334155;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background-color: var(--bg-color); color: var(--text); line-height: 1.6; }
+
+.hero { background: var(--primary); color: white; text-align: center; padding: 60px 20px; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--accent); }
+
+.container { width: 90%; max-width: 1200px; margin: 40px auto; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+.card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.card h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.25rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+
+.input-group { display: flex; gap: 10px; margin-bottom: 15px; }
+.input-group input { flex: 1; padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; }
+.input-group button { padding: 8px 15px; background: var(--accent); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+.input-group button:hover { background: #059669; }
+
+.checklist { list-style: none; }
+.checklist li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.95rem; }
+.checklist input[type="checkbox"] { transform: scale(1.2); accent-color: var(--accent); }
+
+.total { margin-top: 15px; font-size: 1.2rem; font-weight: bold; color: var(--primary); text-align: right; }
+.itinerary ul { padding-left: 20px; color: var(--text); }
+.itinerary li { margin-bottom: 10px; }
