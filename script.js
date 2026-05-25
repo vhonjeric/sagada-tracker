@@ -11,25 +11,34 @@ function addGear() {
     }
 }
 
-// Add Expense and Update Budget
+// Add Custom Expense and Update Budget
 let totalBudget = 1300; // Starting total
 
 function addExpense() {
-    const input = document.getElementById('budget-input');
+    const nameInput = document.getElementById('expense-name');
+    const amountInput = document.getElementById('budget-amount');
     const list = document.getElementById('expense-list');
     const totalDisplay = document.getElementById('total-budget');
-    const amount = parseInt(input.value);
+    
+    // Fallback to "Misc Expense" if they leave the name blank
+    const expenseName = nameInput.value.trim() !== '' ? nameInput.value.trim() : 'Misc Expense';
+    const amount = parseInt(amountInput.value);
 
+    // Check if the amount is a valid number greater than 0
     if (!isNaN(amount) && amount > 0) {
         // Add to list
         const li = document.createElement('li');
-        li.innerText = `Custom Expense - ₱${amount}`;
+        li.innerText = `${expenseName} - ₱${amount}`;
         list.appendChild(li);
         
         // Update total
         totalBudget += amount;
         totalDisplay.innerText = totalBudget;
         
-        input.value = ''; // Clear input
+        // Clear inputs after adding
+        nameInput.value = '';
+        amountInput.value = '';
+    } else {
+        alert("Please enter a valid amount!");
     }
 }
